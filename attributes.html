@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Attributes Reference</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        color: #212529;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 30px;
+        background: linear-gradient(135deg, #4b6cb7, #182848);
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #4b6cb7;
+        color: #2c3e50;
+      }
+
+      .category {
+        margin-bottom: 50px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      thead tr {
+        background-color: #4b6cb7;
+        color: white;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+      }
+
+      tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      tbody tr:nth-of-type(even) {
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:last-of-type {
+        border-bottom: 2px solid #4b6cb7;
+      }
+
+      .attribute-name {
+        font-family: "Courier New", monospace;
+        font-weight: bold;
+        color: #2980b9;
+      }
+
+      .element-name {
+        font-family: "Courier New", monospace;
+        background-color: #f1f1f1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        background: #2c3e50;
+        color: white;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Attributes Reference</h1>
+      <p>Comprehensive guide to the most commonly used HTML attributes</p>
+    </header>
+
+    <main>
+      <section class="category">
+        <h2>Global Attributes</h2>
+        <p>These attributes can be used on any HTML element</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attribute-name">id</td>
+              <td>Specifies a unique id for an element</td>
+              <td>&lt;div id="header"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">class</td>
+              <td>Specifies one or more class names for an element</td>
+              <td>&lt;p class="text intro"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">style</td>
+              <td>Specifies inline CSS styles for an element</td>
+              <td>&lt;div style="color:red;"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">title</td>
+              <td>
+                Specifies extra information about an element (shown as tooltip)
+              </td>
+              <td>&lt;a href="#" title="Home page"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">data-*</td>
+              <td>
+                Used to store custom data private to the page or application
+              </td>
+              <td>&lt;div data-user-id="123"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">hidden</td>
+              <td>
+                Specifies that an element is not yet, or is no longer, relevant
+              </td>
+              <td>&lt;div hidden&gt;Content&lt;/div&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">tabindex</td>
+              <td>Specifies the tab order of an element</td>
+              <td>&lt;input tabindex="1"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">contenteditable</td>
+              <td>Specifies whether the content of an element is editable</td>
+              <td>&lt;div contenteditable="true"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">draggable</td>
+              <td>Specifies whether an element is draggable</td>
+              <td>&lt;div draggable="true"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">lang</td>
+              <td>Specifies the language of the element's content</td>
+              <td>&lt;div lang="en"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">dir</td>
+              <td>
+                Specifies the text direction for the content in an element
+              </td>
+              <td>&lt;div dir="rtl"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">accesskey</td>
+              <td>Specifies a shortcut key to activate/focus an element</td>
+              <td>&lt;button accesskey="s"&gt;Save&lt;/button&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="category">
+        <h2>Form Attributes</h2>
+        <p>Attributes used with form elements</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attribute-name">action</td>
+              <td>
+                Specifies where to send the form-data when a form is submitted
+              </td>
+              <td>&lt;form action="/submit"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">method</td>
+              <td>Specifies the HTTP method to use when sending form-data</td>
+              <td>&lt;form method="post"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">name</td>
+              <td>Specifies the name of an input element</td>
+              <td>&lt;input name="email"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">value</td>
+              <td>Specifies the value of an input element</td>
+              <td>&lt;input value="default"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">type</td>
+              <td>Specifies the type of input element</td>
+              <td>&lt;input type="email"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">placeholder</td>
+              <td>Specifies a short hint that describes the expected value</td>
+              <td>&lt;input placeholder="Enter email"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">required</td>
+              <td>Specifies that an input field must be filled out</td>
+              <td>&lt;input required&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">disabled</td>
+              <td>Specifies that an input element should be disabled</td>
+              <td>&lt;input disabled&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">readonly</td>
+              <td>Specifies that an input field is read-only</td>
+              <td>&lt;input readonly&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">maxlength</td>
+              <td>Specifies the maximum number of characters allowed</td>
+              <td>&lt;input maxlength="10"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">min</td>
+              <td>Specifies the minimum value for an input element</td>
+              <td>&lt;input type="number" min="1"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">max</td>
+              <td>Specifies the maximum value for an input element</td>
+              <td>&lt;input type="number" max="100"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">step</td>
+              <td>Specifies the legal number intervals for an input field</td>
+              <td>&lt;input type="number" step="5"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">pattern</td>
+              <td>
+                Specifies a regular expression that the input's value is checked
+                against
+              </td>
+              <td>&lt;input pattern="[A-Za-z]{3}"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">autocomplete</td>
+              <td>
+                Specifies whether a form should have autocomplete on or off
+              </td>
+              <td>&lt;form autocomplete="off"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">novalidate</td>
+              <td>
+                Specifies that the form should not be validated when submitted
+              </td>
+              <td>&lt;form novalidate&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">selected</td>
+              <td>
+                Specifies that an option should be pre-selected when the page
+                loads
+              </td>
+              <td>&lt;option selected&gt;Default&lt;/option&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">checked</td>
+              <td>Specifies that an input element should be pre-selected</td>
+              <td>&lt;input type="checkbox" checked&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">multiple</td>
+              <td>Specifies that multiple options can be selected at once</td>
+              <td>&lt;select multiple&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="category">
+        <h2>Media Attributes</h2>
+        <p>Attributes used with images, audio, and video elements</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attribute-name">src</td>
+              <td>Specifies the URL of the media file</td>
+              <td>&lt;img src="image.jpg"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">alt</td>
+              <td>Specifies an alternate text for an image</td>
+              <td>&lt;img src="image.jpg" alt="Description"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">width</td>
+              <td>Specifies the width of the media element</td>
+              <td>&lt;img width="500"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">height</td>
+              <td>Specifies the height of the media element</td>
+              <td>&lt;img height="300"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">controls</td>
+              <td>Specifies that audio/video controls should be displayed</td>
+              <td>&lt;video controls&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">autoplay</td>
+              <td>
+                Specifies that the audio/video will start playing as soon as it
+                is ready
+              </td>
+              <td>&lt;video autoplay&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">loop</td>
+              <td>
+                Specifies that the audio/video will start over again, every time
+                it is finished
+              </td>
+              <td>&lt;audio loop&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">muted</td>
+              <td>
+                Specifies that the audio output of the video should be muted
+              </td>
+              <td>&lt;video muted&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">poster</td>
+              <td>
+                Specifies an image to be shown while the video is downloading
+              </td>
+              <td>&lt;video poster="image.jpg"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">preload</td>
+              <td>
+                Specifies if and how the author thinks the video should be
+                loaded when the page loads
+              </td>
+              <td>&lt;video preload="auto"&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="category">
+        <h2>Link and Anchor Attributes</h2>
+        <p>Attributes used with &lt;a&gt; and &lt;link&gt; elements</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attribute-name">href</td>
+              <td>Specifies the URL of the page the link goes to</td>
+              <td>&lt;a href="https://example.com"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">target</td>
+              <td>Specifies where to open the linked document</td>
+              <td>&lt;a target="_blank"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">rel</td>
+              <td>
+                Specifies the relationship between the current document and the
+                linked document
+              </td>
+              <td>&lt;a rel="nofollow"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">download</td>
+              <td>
+                Specifies that the target will be downloaded when a user clicks
+                on the hyperlink
+              </td>
+              <td>&lt;a download="filename"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">hreflang</td>
+              <td>Specifies the language of the linked document</td>
+              <td>&lt;a hreflang="es"&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="category">
+        <h2>Table Attributes</h2>
+        <p>Attributes used with table elements</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attribute-name">colspan</td>
+              <td>Specifies the number of columns a table cell should span</td>
+              <td>&lt;td colspan="2"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">rowspan</td>
+              <td>Specifies the number of rows a table cell should span</td>
+              <td>&lt;td rowspan="2"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">headers</td>
+              <td>Specifies one or more header cells a cell is related to</td>
+              <td>&lt;td headers="col1"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">scope</td>
+              <td>
+                Specifies whether a header cell is a header for a column, row,
+                or group of columns or rows
+              </td>
+              <td>&lt;th scope="col"&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="category">
+        <h2>Meta and Script Attributes</h2>
+        <p>Attributes used with &lt;meta&gt; and &lt;script&gt; elements</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attribute-name">charset</td>
+              <td>Specifies the character encoding for the HTML document</td>
+              <td>&lt;meta charset="UTF-8"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">content</td>
+              <td>
+                Gives the value associated with the http-equiv or name attribute
+              </td>
+              <td>&lt;meta name="description" content="..."&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">http-equiv</td>
+              <td>
+                Provides an HTTP header for the information/value of the content
+                attribute
+              </td>
+              <td>&lt;meta http-equiv="refresh"&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">async</td>
+              <td>Specifies that the script is executed asynchronously</td>
+              <td>&lt;script async&gt;</td>
+            </tr>
+            <tr>
+              <td class="attribute-name">defer</td>
+              <td>
+                Specifies that the script is executed when the page has finished
+                parsing
+              </td>
+              <td>&lt;script defer&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>HTML Attributes Reference &copy; 2023</p>
+      <p>For learning and reference purposes</p>
+    </footer>
+  </body>
+</html>
